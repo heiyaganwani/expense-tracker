@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Expense Tracker Dashboard</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <h2>Expense Tracker</h2>
+
+    <button onclick="logout()">Logout</button>
+
+</nav>
+
+
+<main class="dashboard">
+
+    <h1>Dashboard</h1>
+
+
+    <!-- SUMMARY CARDS -->
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Total Income</h3>
+            <p id="totalIncome">₹0</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Expenses</h3>
+            <p id="totalExpense">₹0</p>
+        </div>
+
+        <div class="card">
+            <h3>Balance</h3>
+            <p id="balance">₹0</p>
+        </div>
+
+        <div class="card">
+            <h3>Highest Expense</h3>
+            <p id="highestExpense">₹0</p>
+        </div>
+
+    </div>
+
+
+    <!-- ADD EXPENSE -->
+
+    <section class="section">
+
+        <h2>Add Expense</h2>
+
+        <div class="form-row">
+
+            <input
+                id="expenseTitle"
+                placeholder="Expense title">
+
+            <input
+                id="expenseAmount"
+                type="number"
+                placeholder="Amount">
+
+            <input
+                id="expenseCategory"
+                placeholder="Category">
+
+            <input
+                id="expenseDate"
+                type="date">
+
+            <button onclick="addExpense()">
+                Add Expense
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ADD INCOME -->
+
+    <section class="section">
+
+        <h2>Add Income</h2>
+
+        <div class="form-row">
+
+            <input
+                id="incomeSource"
+                placeholder="Income source">
+
+            <input
+                id="incomeAmount"
+                type="number"
+                placeholder="Amount">
+
+            <input
+                id="incomeDate"
+                type="date">
+
+            <button onclick="addIncome()">
+                Add Income
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- BUDGET -->
+
+    <section class="section">
+
+        <h2>Set Category Budget</h2>
+
+        <div class="form-row">
+
+            <input
+                id="budgetCategory"
+                placeholder="Category">
+
+            <input
+                id="budgetAmount"
+                type="number"
+                placeholder="Budget amount">
+
+            <button onclick="addBudget()">
+                Save Budget
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORY ANALYTICS -->
+
+    <section class="section">
+
+        <h2>Category-wise Expenses</h2>
+
+        <div id="categoryData">
+            Loading...
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

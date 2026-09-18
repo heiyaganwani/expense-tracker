@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    background: #222;
+    color: white;
+    padding: 15px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h2 {
+    margin: 0;
+}
+
+
+/* BUTTON */
+
+button {
+    padding: 11px 20px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #222;
+    color: white;
+
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+/* DASHBOARD */
+
+.dashboard {
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* CARDS */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+
+/* SECTIONS */
+
+.section {
+    background: white;
+
+    margin-top: 25px;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+/* FORM */
+
+.form-row {
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+input {
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    flex: 1;
+
+    min-width: 160px;
+}
+
+
+/* LOGIN */
+
+.login-container {
+    width: 350px;
+
+    margin: 120px auto;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow:
+        0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+.login-container h1 {
+    margin-bottom: 5px;
+}
+
+.login-container input {
+    width: 100%;
+
+    margin: 10px 0;
+}
+
+.login-container button {
+    width: 100%;
+
+    margin-top: 10px;
+}
+
+#message {
+    margin-top: 15px;
+}
+
+
+/* CATEGORY ANALYTICS */
+
+.category-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 12px;
+
+    border-bottom: 1px solid #eee;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .cards {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard {
+        padding: 15px;
+    }
+}
